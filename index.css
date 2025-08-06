@@ -35,6 +35,20 @@ html {
     cursor: pointer;
 }
 
+
+.profile-button-section {
+    background-color: transparent;
+    border: 1px solid grey;
+    color: grey;
+    cursor: pointer;
+    display: block;
+    font-size: 1.2vw;
+    letter-spacing: 2px;
+    margin: 2em 0 1em;
+    padding: .5em 1.5em;
+}
+
+
 #title {
     color: #fff;
     font-size: 4em;
