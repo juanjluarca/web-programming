@@ -35,6 +35,15 @@ html {
     cursor: pointer;
 }
 
+.profile:hover {
+    color: #fff;
+}
+
+.profile:hover img {
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
 
 .profile-button-section {
     background-color: transparent;
@@ -48,6 +57,10 @@ html {
     padding: .5em 1.5em;
 }
 
+.profile-button-section:hover {
+    border-color: #fff;
+    color: #fff;
+}
 
 #title {
     color: #fff;
