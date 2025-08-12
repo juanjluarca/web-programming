@@ -18,14 +18,6 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install Doppler CLI
-        run: curl -Ls https://cli.doppler.com/install.sh | sh
-
-      - name: Doppler Setup and Login
-        env:
-          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
-        run: doppler setup --no-interactive --project ${{ secrets.DOPPLER_PROJECT }} --config ${{ secrets.DOPPLER_CONFIG }} --environment ${{ secrets.DOPPLER_ENVIRONMENT }}
-
       - name: Install dependencies
         run: npm install
 
