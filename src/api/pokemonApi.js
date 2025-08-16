@@ -15,13 +15,11 @@ const getPokemonList = async (limit = 151, offset = 0) => {
 const getPokemonDetail = async (url) => {
     try {
         const res = await axios.get(url);
-        console.log(res.data.description)
         return {
             id: res.data.id,
             name: res.data.name,
             image: res.data.sprites.other["official-artwork"].front_default,
             types: res.data.types.map((t) => t.type.name),
-            description: res.data.description,
         };
     } catch (err) {
         console.error("Error fetching Pokemon detail:", err);
