@@ -4,7 +4,7 @@ function Title() {
     return (
         <div className="main-title-container">
             <img
-                src='src/assets/Poke_Ball_icon.svg'
+                src='/Poke_Ball_icon.svg'
                 alt="PokeBall"
                 className="title-icon"
             />
