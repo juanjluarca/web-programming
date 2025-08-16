@@ -5,6 +5,15 @@ export function App() {
         <>
             <PokeCard />
             <PokeCard />
+            <PokeCard />
+            <PokeCard />
+            <PokeCard />
+            <PokeCard />
+            <PokeCard />
+            <PokeCard />
+            <PokeCard />
+            <PokeCard />
+            <PokeCard />
         </>
     )
 }
