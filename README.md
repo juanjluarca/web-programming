@@ -1,12 +1,44 @@
-# React + Vite
+# Documentación de Integraciones y Despliegue - Assessment-01
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A continuación se presentan evidencias visuales y el acceso público a la aplicación desplegada.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Integración Doppler con el Repositorio
 
-## Expanding the ESLint configuration
+Captura de pantalla de la pestaña **Config Syncs** en Doppler, donde se muestra la integración con el repositorio:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![Integración Doppler Config Syncs](docs/config-syncs-screenshot.png)
+
+---
+
+## Variables de Doppler
+
+Captura de pantalla de las variables configuradas en Doppler:
+
+![Variables Doppler](docs/doppler-variables-screenshot.png)
+
+---
+
+## Secretos en GitHub
+
+Captura de pantalla de los secretos configurados en GitHub:
+
+![Secretos GitHub](docs/github-secrets-screenshot.png)
+
+---
+
+## Captura de la aplicación mostrando las PokeCards
+
+![Aplicacion](docs/app-screenshot.png)
+
+
+---
+
+## URL del CDN de CloudFront
+
+URL pública del CDN para acceso al contenido desplegado:
+
+[¡Click aquí para acceder al contenido desplegado!](https://d1s0uwqjop6nx.cloudfront.net/)
+
+---
