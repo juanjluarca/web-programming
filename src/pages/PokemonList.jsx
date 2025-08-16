@@ -19,6 +19,8 @@ function PokemonList({ season = 1 }) {
         fetchData();
     }, [season, limit, offset]);
 
+
+
     return (
         <div className="pokemon-list">
             {pokemons.map((p) => (
