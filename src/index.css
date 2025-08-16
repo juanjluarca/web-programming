@@ -50,6 +50,7 @@ body {
     color: #222;
     border-bottom: 2px solid #999;
     padding-bottom: 4px;
+    text-transform: capitalize;
 }
 
 .poke-card-image {

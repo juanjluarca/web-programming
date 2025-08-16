@@ -3,7 +3,7 @@ import PokemonList from "./pages/PokemonList";
 import SeasonSelector from "./components/SeasonSelector";
 
 export function App() {
-    const [season, setSeason] = useState(2);
+    const [season, setSeason] = useState(1);
 
     return (
         <>

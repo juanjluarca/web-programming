@@ -3,7 +3,7 @@ import '../index.css'
 function PokeCard({
     name = "Default",
     image = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png",
-    types = ["normal", "flying"]
+    types = ["none", "none"]
 }) {
     return (
         <article className="poke-card">
