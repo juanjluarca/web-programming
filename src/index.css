@@ -34,3 +34,36 @@ body {
     max-height: 180px;
     object-fit: contain;
 }
+
+.poke-card-header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #222;
+    border-bottom: 2px solid #999;
+    padding-bottom: 4px;
+}
+
+.poke-card-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #999;
+}
+
+.poke-card-types {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.type {
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    background-color: #333;
+}
