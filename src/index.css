@@ -6,16 +6,20 @@ body {
 
 
 #root {
+    padding: 20px;
+}
+
+.pokemon-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    gap: 50px;
     padding: 20px;
 }
 
 /* PokeCard styles */
 
 .poke-card {
-    max-width: 250px;
+    max-width: 220px;
     min-width: 220px;
     height: auto;
     aspect-ratio: 250 / 350;
@@ -66,4 +70,15 @@ body {
     font-weight: bold;
     color: white;
     background-color: #333;
+}
+
+.poke-card:hover {
+    color: white;
+    box-shadow: 1.5em 1.5em 1em rgba(0, 0, 0, 0.4);
+    transform: translateY(-0.5em);
+}
+
+
+.season-selector-container {
+    margin-bottom: 20px;
 }
