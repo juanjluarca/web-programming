@@ -1,5 +1,4 @@
 import React from "react";
-import PokeBallIcon from "../assets/Poke_Ball_icon.svg"; // importa el SVG
 
 function Title() {
     return (
