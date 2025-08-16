@@ -9,9 +9,12 @@ body {
     padding: 20px;
 }
 
+/* Pokemon main page styles */
+
 .pokemon-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    place-items: center;
     gap: 50px;
     padding: 20px;
 }
@@ -31,6 +34,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 12px;
+    transition: all 0.3s;
 }
 
 .poke-card-image img {
@@ -75,10 +79,33 @@ body {
 .poke-card:hover {
     color: white;
     box-shadow: 1.5em 1.5em 1em rgba(0, 0, 0, 0.4);
-    transform: translateY(-0.5em);
+    transform: translateY(-0.7em);
 }
 
+/* Season selector */
 
 .season-selector-container {
-    margin-bottom: 20px;
+    gap: 8px;
+    margin: 20px auto;
+    padding: 8px 12px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background: #f8f8f8;
+    width: fit-content;
+    font-family: 'Segoe UI';
+}
+
+.season-selector-container label {
+    font-weight: bold;
+    color: #333;
+}
+
+.season-selector-container select {
+    padding: 6px 10px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
