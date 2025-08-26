@@ -7,7 +7,6 @@ function TaskForm({ onAddTask }) {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (!title.trim()) return;
 
         const newTask = {
             id: Date.now(),
@@ -31,7 +30,6 @@ function TaskForm({ onAddTask }) {
                     placeholder="Título..."
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
-                    required
                 />
             </div>
 
