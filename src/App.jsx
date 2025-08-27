@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import TaskForm from "./components/to-do-form";
 import ToDoList from "./components/to-do-list";
+import StatusSelector from "./components/selector";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
     return (
         <>
             <TaskForm onAddTask={handleAddTask} />
+            <StatusSelector />
             <div className="tasks-container">
                 <ToDoList
                     tasks={tasks}
