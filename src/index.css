@@ -1,18 +1,34 @@
 body {
   margin: 0;
-  background-color: #6873d2;
+  background-color: #3a49ca;
 }
 
 
 #root {
   padding: 20px;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
 
+.tasks-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.to-do-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 20px;
+  justify-content: center;
 }
 
 .to-do-item {
-  max-width: 200px;
+  flex: 0 0 200px;
+  min-height: 300px;
   background-color: white;
   border: 4px solid #333;
   border-radius: 6px;
@@ -31,6 +47,12 @@ body {
   padding: 0;
 }
 
+.to-do-title h2 {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: larger;
+}
+
 .to-do-description {
   flex: 1;
   display: flex;
@@ -43,6 +65,7 @@ body {
   justify-content: end;
   gap: 8px;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .status-item {

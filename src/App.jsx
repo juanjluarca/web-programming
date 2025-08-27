@@ -10,6 +10,9 @@ function App() {
         return savedTasks ? JSON.parse(savedTasks) : [];
     });
 
+    const [filterStatus, setFilterStatus] = useState(1); // 1 = Todas, 2 = Completadas, 3 = Pendientes
+
+
     useEffect(() => {
         localStorage.setItem("tasks", JSON.stringify(tasks));
     }, [tasks]);
@@ -30,13 +33,19 @@ function App() {
         );
     };
 
+    const filteredTasks = tasks.filter((task) => {
+        if (filterStatus === 2) return task.completed;
+        if (filterStatus === 3) return !task.completed;
+        return true;
+    });
+
     return (
         <>
             <TaskForm onAddTask={handleAddTask} />
-            <StatusSelector />
+            <StatusSelector status={filterStatus} onChange={setFilterStatus} />
             <div className="tasks-container">
                 <ToDoList
-                    tasks={tasks}
+                    tasks={filteredTasks}
                     onDeleteTask={handleDeleteTask}
                     onToggleComplete={handleToggleComplete}
                 />
