@@ -17,13 +17,13 @@ function ToDoCard({
                 <p>{description}</p>
             </div>
             <div className="to-do-status">
-                <span className='status-item'>Status: {status}</span>
+                <span className={`status-item ${status}`}>Status: {status}</span>
             </div>
             <div className="to-do-actions">
-                <button onClick={() => onToggleComplete(id)}>
+                <button className='to-do-button' onClick={() => onToggleComplete(id)}>
                     {status === "Pendiente" ? "Marcar completada" : "Marcar pendiente"}
                 </button>
-                <button onClick={() => onDelete(id)}>Eliminar</button>
+                <button className='to-do-button' onClick={() => onDelete(id)}>Eliminar</button>
             </div>
         </article>
     );
