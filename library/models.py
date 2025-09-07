@@ -16,6 +16,12 @@ class Book(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
 
 
+class Chapter(models.Model):
+    title = models.CharField(max_length=100)
+    number = models.IntegerField()
+    book = models.ForeignKey(Book, on_delete=models.CASCADE)
+
+
 class Country(models.Model):
     name = models.CharField(max_length=50)
     population = models.PositiveBigIntegerField()
