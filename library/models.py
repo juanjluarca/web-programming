@@ -6,6 +6,7 @@ class Author(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
     birth_date = models.DateField()
+    country = models.ForeignKey('Country', on_delete=models.SET_NULL, null=True, blank=True)
 
 
 class Country(models.Model):
