@@ -22,6 +22,12 @@ class Chapter(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
 
 
+class Review(models.Model):
+    text = models.TextField()
+    date = models.DateTimeField(auto_now_add=True)
+    book = models.ForeignKey(Book, on_delete=models.CASCADE)
+
+
 class Country(models.Model):
     name = models.CharField(max_length=50)
     population = models.PositiveBigIntegerField()

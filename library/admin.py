@@ -3,6 +3,7 @@ from .models import Author
 from .models import Country
 from .models import Book
 from .models import Chapter
+from .models import Review
 # Register your models here.
 
 @admin.register(Author)
@@ -21,3 +22,6 @@ class BookAdmin(admin.ModelAdmin):
 class ChapterAdmin(admin.ModelAdmin):
     pass
 
+@admin.register(Review)
+class ReviewAdmin(admin.ModelAdmin):
+    pass
