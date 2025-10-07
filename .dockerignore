@@ -1,0 +1,55 @@
+# Archivos y carpetas del sistema
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+
+# Entornos virtuales
+venv/
+env/
+.venv/
+
+
+# Archivos y carpetas de dependencias del host
+node_modules/
+.bash_history
+.DS_Store
+
+# Archivos generados por el IDE o sistema operativo
+.vscode/
+.idea/
+*.swp
+*.swo
+Thumbs.db
+
+# Archivos de compilación o cache
+*.egg-info/
+build/
+dist/
+*.spec
+
+# Archivos de pruebas
+coverage/
+htmlcov/
+pytest_cache/
+tests/__pycache__/
+
+# Archivos estáticos generados
+staticfiles/
+media/
+
+# Carpeta de migraciones
+*/migrations/__pycache__/
+
+# Archivos de Docker y Git
+Dockerfile
+docker-compose.yml
+.git/
+.gitignore
+
+# Otros archivos del sistema
+*.bak
+*.tmp
