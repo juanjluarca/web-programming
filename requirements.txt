@@ -5,3 +5,4 @@ pydot==4.0.1
 pyparsing==3.2.3
 sqlparse==0.5.3
 typing_extensions==4.15.0
+psycopg2-binary
