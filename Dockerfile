@@ -1,4 +1,4 @@
-# Imagen base ligera de Python
+# Imagen base ligera de Python, no usé alpine por temas de librerías que no maneja
 FROM python:3.13-slim
 
 # Evitar que Python cree archivos .pyc y activar logging sin buffer
