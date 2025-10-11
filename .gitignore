@@ -25,7 +25,3 @@ staticfiles/
 .vscode/
 .idea/
 *.swp
-
-
-docker-compose.yml
-Dockerfile
