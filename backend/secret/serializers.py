@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 class HideSecretSerializer(serializers.Serializer):
     # Serializer para ocultar un secreto
-    
+
     content = serializers.CharField(
         max_length=10240,  # 10KB máximo
         required=True,
@@ -12,4 +12,13 @@ class HideSecretSerializer(serializers.Serializer):
         default=86400,      # 24 horas por defecto
         required=False,
         help_text="Tiempo de vida en segundos"
+    )
+
+class RevealSecretSerializer(serializers.Serializer):
+    # Serializer para revelar un secreto
+    key = serializers.CharField(
+        max_length=12,
+        min_length=12,
+        required=True,
+        help_text="Key del secreto a revelar"
     )

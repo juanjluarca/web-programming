@@ -4,7 +4,7 @@ from django.shortcuts import render
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from .serializers import HideSecretSerializer
+from .serializers import HideSecretSerializer, RevealSecretSerializer
 from .services import SecretService
 
 class SecretViewSet(viewsets.ViewSet):
@@ -36,4 +36,35 @@ class SecretViewSet(viewsets.ViewSet):
             return Response(
                 {'error': str(e)},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+        
+
+    @action(detail=False, methods=['post'], url_path='reveal')
+    def reveal(self, request):
+        # Revela un secreto y lo elimina de Redis
+        # POST /api/secrets/reveal/
+
+        serializer = RevealSecretSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        
+        try:
+            content = SecretService.reveal_secret(
+                key=serializer.validated_data['key']
+            )
+            
+            return Response({
+                'content': content,
+                'message': 'Este secreto ha sido eliminado y no puede volver a ser accedido'
+            }, status=status.HTTP_200_OK)
+            
+        except KeyError as e:
+            return Response(
+                {'error': str(e)},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+            
+        except KeyError as e:
+            return Response(
+                {'error': str(e)},
+                status=status.HTTP_404_NOT_FOUND
             )
