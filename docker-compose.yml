@@ -41,6 +41,26 @@ services:
     networks:
       - secret-network
 
+ # Frontend Next.js
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: secret-frontend
+    command: npm run dev
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000/api
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+    depends_on:
+      - backend
+    networks:
+      - secret-network
+
 networks:
   secret-network:
     driver: bridge
