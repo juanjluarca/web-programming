@@ -6,6 +6,7 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from .serializers import HideSecretSerializer, RevealSecretSerializer
 from .services import SecretService
+from .exceptions import KeyGenerationError, SecretNotFoundError, InvalidKeyFormatError
 
 class SecretViewSet(viewsets.ViewSet):
 
@@ -32,9 +33,9 @@ class SecretViewSet(viewsets.ViewSet):
                 'message': 'Secreto guardado exitosamente'
             }, status=status.HTTP_201_CREATED)
             
-        except KeyError as e:
+        except KeyGenerationError as e:
             return Response(
-                {'error': str(e)},
+                {'error': 'Error al generar la clave del secreto'},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
         
@@ -57,14 +58,14 @@ class SecretViewSet(viewsets.ViewSet):
                 'message': 'Este secreto ha sido eliminado y no puede volver a ser accedido'
             }, status=status.HTTP_200_OK)
             
-        except KeyError as e:
+        except InvalidKeyFormatError as e:
             return Response(
-                {'error': str(e)},
+                {'error': 'El formato de la clave es inválido'},
                 status=status.HTTP_400_BAD_REQUEST
             )
             
-        except KeyError as e:
+        except SecretNotFoundError as e:
             return Response(
-                {'error': str(e)},
-                status=status.HTTP_404_NOT_FOUND
-            )
+                    {'error': 'El secreto no existe o ya fue revelado'},
+                    status=status.HTTP_404_NOT_FOUND
+                )
